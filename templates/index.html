@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Análisis Territorial</title>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div>
+                <h1>Dashboard de Análisis Territorial</h1>
+                <h2 id="estado-titulo"></h2>
+            </div>
+            <div class="selector-container">
+                <label for="estado-select">Selecciona un Estado:</label>
+                <select id="estado-select">
+                    {% for estado in estados %}
+                        <option value="{{ estado }}">{{ estado }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </header>
+
+        <section class="kpi-grid">
+            <div class="card kpi-card">
+                <div class="kpi-content">
+                    <h3>Población Total</h3>
+                    <p id="kpi-poblacion">Cargando...</p>
+                </div>
+                <div class="kpi-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-content">
+                    <h3>Viviendas Totales</h3>
+                    <p id="kpi-viviendas">Cargando...</p>
+                </div>
+                <div class="kpi-icon">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-content">
+                    <h3>Número de Negocios</h3>
+                    <p id="kpi-negocios">Cargando...</p>
+                </div>
+                <div class="kpi-icon">
+                    <i class="fa-solid fa-store"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="chart-grid">
+            <div class="card chart-card">
+                <h3>Actividades Económicas Dominantes</h3>
+                <div id="chart-actividades" class="plotly-chart"></div>
+            </div>
+            <div class="card chart-card">
+                <h3>Perfil Educativo (Pob. >15 años)</h3>
+                <div id="chart-educacion" class="plotly-chart"></div>
+            </div>
+            <div class="card chart-card-full">
+                <h3>Perfil de Edad y Género</h3>
+                <div id="chart-piramide" class="plotly-chart"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

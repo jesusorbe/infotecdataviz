@@ -1,0 +1,119 @@
+:root {
+    --background-color: #f0f2f5;
+    --card-background-color: #ffffff;
+    --text-color: #333;
+    --primary-color: #0d6efd;
+    --header-color: #4a4a4a;
+    --border-radius: 8px;
+    --box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 500;
+    color: var(--header-color);
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.selector-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#estado-select {
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.card {
+    background-color: var(--card-background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+}
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.kpi-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kpi-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1em;
+    font-weight: 400;
+    color: #6c757d;
+}
+
+.kpi-content p {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--header-color);
+}
+
+.kpi-icon i {
+    font-size: 2.8em;
+    color: #e9ecef;
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.chart-card h3, .chart-card-full h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.chart-card-full {
+    grid-column: 1 / -1;
+}
+
+.plotly-chart {
+    width: 100%;
+    height: 350px;
+}
