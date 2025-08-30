@@ -1,6 +1,6 @@
 # Dashboard de Análisis Territorial
 
-Este proyecto implementa un dashboard interactivo para la visualización de datos sociodemográficos y económicos de México por estado. Utiliza FastAPI para el backend, DuckDB como base de datos y Plotly.js para la renderización de gráficos en el frontend.
+Este proyecto implementa un dashboard interactivo para la visualización de datos sociodemográficos y económicos de México por estado. Utiliza FastAPI para el backend, DuckDB como base de datos y Plotly.js para la renderización de gráficos en el frontend. Y es la primera entrega de la materia de Visión Computacional de la Maestría en Ciencias de Datos e información en INFOTEC. El dashboard en producción se puede ver en [orbeinc.com](https://orbeinc.com) 
 
 ---
 
